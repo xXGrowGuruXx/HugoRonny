@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\akein\\Desktop\\Schule\\Programmierung\\Git Hub\\TQ5Uebung\\Programmierung\\BankProject\\BankProject\\BankProject.csproj",
+      "projectUniqueName": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\BankProject.csproj",
       "projectName": "BankProject",
-      "projectPath": "C:\\Users\\akein\\Desktop\\Schule\\Programmierung\\Git Hub\\TQ5Uebung\\Programmierung\\BankProject\\BankProject\\BankProject.csproj",
+      "projectPath": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\BankProject.csproj",
       "packagesPath": "C:\\Users\\akein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akein\\Desktop\\Schule\\Programmierung\\Git Hub\\TQ5Uebung\\Programmierung\\BankProject\\BankProject\\obj\\",
+      "outputPath": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

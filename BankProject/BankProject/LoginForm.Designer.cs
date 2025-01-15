@@ -28,16 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            comboBox1 = new ComboBox();
             SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Kunde", "Angestellter" });
+            comboBox1.Location = new Point(339, 162);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 36);
+            comboBox1.TabIndex = 0;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(704, 422);
+            Controls.Add(comboBox1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -46,5 +57,7 @@
         }
 
         #endregion
+
+        private ComboBox comboBox1;
     }
 }

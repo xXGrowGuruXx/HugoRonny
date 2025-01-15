@@ -15,3 +15,20 @@ C:\Users\akein\Desktop\Schule\Programmierung\Git Hub\TQ5Uebung\Programmierung\Ba
 C:\Users\akein\Desktop\Schule\Programmierung\Git Hub\TQ5Uebung\Programmierung\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.pdb
 C:\Users\akein\Desktop\Schule\Programmierung\Git Hub\TQ5Uebung\Programmierung\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.genruntimeconfig.cache
 C:\Users\akein\Desktop\Schule\Programmierung\Git Hub\TQ5Uebung\Programmierung\BankProject\BankProject\obj\Debug\net8.0-windows\ref\BankProject.dll
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.exe
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.deps.json
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.runtimeconfig.json
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.dll
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.pdb
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.LoginForm.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.csproj.GenerateResource.cache
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.AssemblyInfoInputs.cache
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.AssemblyInfo.cs
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.csproj.CoreCompileInputs.cache
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.sourcelink.json
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.dll
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\refint\BankProject.dll
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.pdb
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.genruntimeconfig.cache
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\ref\BankProject.dll
