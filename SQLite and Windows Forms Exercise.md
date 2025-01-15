@@ -173,11 +173,11 @@ INSERT INTO LoanPayment (LoanPaymentID, LoanID, ScheduledPaymentDate, PaymentAmo
 
 ### **5. Login Feature erstellen**
 
-**Ziel**: Erlaube es Benutzer mit ihren `AccountID` und `AccountPin` sich selbst einzuloggen.
+**Ziel**: Erlaube es Benutzer mit ihren `AccountNumber` und `AccountPin` sich selbst einzuloggen.
 
 **Steps**:
 1. Erstelle einen Windows Forms Login Form.
-2. Der Benutzer soll aufgefordert werden seinen `AccountID` und `AccountPin` zu verwenden um sich einzuloggen.
+2. Der Benutzer soll aufgefordert werden seinen `AccountNumber` und `AccountPin` zu verwenden um sich einzuloggen.
 3. Validiere die Eingaben mit unserer Datenbank.
 4. Wir unterscheiden zwischen die Kunden `Corporate` und `Individual`. Einige eigenschaften sind gemeinsam und einige gehören nur zu einem bestimmten `AccountType` (Hinweis abstrakt und virtuell).
 
