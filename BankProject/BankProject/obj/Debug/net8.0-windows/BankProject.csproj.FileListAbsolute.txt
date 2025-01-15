@@ -32,3 +32,5 @@ C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\o
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.pdb
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.genruntimeconfig.cache
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\ref\BankProject.dll
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Konto.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Kunde.Kontoverwaltung_Kunde.resources
