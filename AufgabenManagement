@@ -1,3 +1,8 @@
 Nabila - Datenbank
 Michael - UML
 Ronny & Hugo - Oberfläche
+
+
+Branch : Account : Customer : Person
+Customer : Employee
+Transaction : LoanPayment : Loan
