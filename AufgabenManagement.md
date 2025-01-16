@@ -26,7 +26,7 @@ Kreditverwaltung Kunde - fehlt
 
 Überweisung/Abheben Kunde - fehlt
 
-History Kunde - fehlt
+History Kunde - gui Ronny fertig - skript fehlt
 
 **MITARBEITER:**
 
