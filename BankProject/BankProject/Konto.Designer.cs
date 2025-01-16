@@ -86,7 +86,7 @@
             // history
             // 
             history.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            history.Location = new Point(734, 9);
+            history.Location = new Point(585, 9);
             history.Name = "history";
             history.Size = new Size(129, 46);
             history.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // einzahlen
             // 
-            einzahlen.Location = new Point(363, 113);
+            einzahlen.Location = new Point(298, 113);
             einzahlen.Name = "einzahlen";
             einzahlen.Size = new Size(180, 43);
             einzahlen.TabIndex = 6;
@@ -113,7 +113,7 @@
             // 
             // auszahlen
             // 
-            auszahlen.Location = new Point(683, 113);
+            auszahlen.Location = new Point(558, 113);
             auszahlen.Name = "auszahlen";
             auszahlen.Size = new Size(180, 43);
             auszahlen.TabIndex = 8;
@@ -122,7 +122,7 @@
             // 
             // logout
             // 
-            logout.Location = new Point(683, 186);
+            logout.Location = new Point(558, 186);
             logout.Name = "logout";
             logout.Size = new Size(180, 43);
             logout.TabIndex = 11;
@@ -140,7 +140,7 @@
             // 
             // verwaltung
             // 
-            verwaltung.Location = new Point(352, 9);
+            verwaltung.Location = new Point(287, 9);
             verwaltung.Name = "verwaltung";
             verwaltung.Size = new Size(209, 48);
             verwaltung.TabIndex = 12;
@@ -149,7 +149,7 @@
             // 
             // kredite
             // 
-            kredite.Location = new Point(363, 186);
+            kredite.Location = new Point(298, 186);
             kredite.Name = "kredite";
             kredite.Size = new Size(180, 43);
             kredite.TabIndex = 13;
@@ -161,7 +161,8 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
-            ClientSize = new Size(875, 237);
+            BackgroundImage = Properties.Resources.Random_Bank_Icon;
+            ClientSize = new Size(767, 237);
             Controls.Add(kredite);
             Controls.Add(verwaltung);
             Controls.Add(logout);

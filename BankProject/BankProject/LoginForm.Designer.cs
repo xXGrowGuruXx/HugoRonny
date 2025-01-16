@@ -118,6 +118,8 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ScrollBar;
+            BackgroundImage = Properties.Resources.Random_Bank_Icon;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(395, 387);
             Controls.Add(login_comboBox);
             Controls.Add(label2);
@@ -127,6 +129,7 @@
             Controls.Add(label1);
             Controls.Add(username);
             Controls.Add(remember_checkbox);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");

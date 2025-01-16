@@ -46,6 +46,7 @@
             label8 = new Label();
             del_konto = new Button();
             back = new Button();
+            change_pass = new Button();
             SuspendLayout();
             // 
             // label1
@@ -195,7 +196,7 @@
             // 
             // del_konto
             // 
-            del_konto.Location = new Point(216, 419);
+            del_konto.Location = new Point(394, 419);
             del_konto.Name = "del_konto";
             del_konto.Size = new Size(174, 46);
             del_konto.TabIndex = 15;
@@ -211,12 +212,24 @@
             back.Text = "Zurück";
             back.UseVisualStyleBackColor = true;
             // 
+            // change_pass
+            // 
+            change_pass.Location = new Point(53, 419);
+            change_pass.Name = "change_pass";
+            change_pass.Size = new Size(174, 46);
+            change_pass.TabIndex = 17;
+            change_pass.Text = "Passwort ändern";
+            change_pass.UseVisualStyleBackColor = true;
+            // 
             // Kontoverwaltung_Kunde
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ScrollBar;
+            BackColor = SystemColors.GradientActiveCaption;
+            BackgroundImage = Properties.Resources.Random_Bank_Icon;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(696, 549);
+            Controls.Add(change_pass);
             Controls.Add(back);
             Controls.Add(del_konto);
             Controls.Add(taxID);
@@ -234,6 +247,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -264,5 +278,6 @@
         private Label label8;
         private Button del_konto;
         private Button back;
+        private Button change_pass;
     }
 }
