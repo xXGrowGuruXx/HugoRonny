@@ -17,7 +17,7 @@ Transaction : LoanPayment : Loan
 
 Programm:
 
-Database - Nabila ***fertig***
+Database - Hugo & Nabila ***fertig***
 
 Login - gui Hugo ***fertig*** - script Hugo ***fertig***
 
