@@ -27,7 +27,7 @@ Konto - gui Hugo ***fertig*** - script fehlt
 
 **KUNDE:**
 
-Kontoverwaltung Kunde - gui Hugo ***fertig*** - script fehlt
+Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
 
 Kreditverwaltung Kunde - **fehlt**
 
@@ -39,9 +39,11 @@ History Kunde - gui Ronny ***fertig*** - skript **fehlt**
 
 **MITARBEITER:**
 
-Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript *begonnen*
+Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript **fertig**
 
-Mitarbeiter bearbeiten - gui Ronny ***fertig*** - skript **fehlt**
+Mitarbeiter bearbeiten - Auswahlmenu - gui Ronny ***fertig*** - skript **fertig**
+
+Mitarbeiter bearbeiten - Bearbeiten - gui Hugo **fertig** - script *begonnen*
 
 Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
 
