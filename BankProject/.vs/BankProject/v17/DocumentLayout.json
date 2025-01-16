@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|c:\\users\\akein\\documents\\github\\hugoronnymichaelnabila\\bankproject\\bankproject\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|c:\\users\\akein\\documents\\github\\hugoronnymichaelnabila\\bankproject\\bankproject\\angestellter\\bearbeiten\\bearbeitenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\angestellter\\bearbeiten\\bearbeitenform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|c:\\users\\akein\\documents\\github\\hugoronnymichaelnabila\\bankproject\\bankproject\\angestellter\\bearbeiten\\mitarbeiter_bearb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\angestellter\\bearbeiten\\mitarbeiter_bearb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|c:\\users\\akein\\documents\\github\\hugoronnymichaelnabila\\bankproject\\bankproject\\angestellter\\bearbeiten\\mitarbeiter_bearb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\angestellter\\bearbeiten\\mitarbeiter_bearb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\bankproject\\angestellter\\main\\mitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\angestellter\\main\\mitarbeiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|c:\\users\\akein\\documents\\github\\hugoronnymichaelnabila\\bankproject\\bankproject\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CE79398-027F-441C-8A90-56BE0CB1C888}|BankProject\\BankProject.csproj|solutionrelative:bankproject\\login\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +42,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BearbeitenForm.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\BearbeitenForm.cs",
+              "RelativeDocumentMoniker": "BankProject\\Angestellter\\Bearbeiten\\BearbeitenForm.cs",
+              "ToolTip": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\BearbeitenForm.cs [Entwurf]",
+              "RelativeToolTip": "BankProject\\Angestellter\\Bearbeiten\\BearbeitenForm.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:48:08.02Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Mitarbeiter_bearb.cs",
+              "DocumentMoniker": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "RelativeDocumentMoniker": "BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "ToolTip": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "RelativeToolTip": "BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:44:40.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mitarbeiter_bearb.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "RelativeDocumentMoniker": "BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs",
+              "ToolTip": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs [Entwurf]",
+              "RelativeToolTip": "BankProject\\Angestellter\\Bearbeiten\\Mitarbeiter_bearb.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:43:50.105Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Mitarbeiter.cs [Entwurf]",
               "DocumentMoniker": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Angestellter\\Main\\Mitarbeiter.cs",
               "RelativeDocumentMoniker": "BankProject\\Angestellter\\Main\\Mitarbeiter.cs",
@@ -42,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Login\\LoginForm.cs",
               "RelativeDocumentMoniker": "BankProject\\Login\\LoginForm.cs",
               "ToolTip": "C:\\Users\\akein\\Documents\\GitHub\\HugoRonnyMichaelNabila\\BankProject\\BankProject\\Login\\LoginForm.cs",
               "RelativeToolTip": "BankProject\\Login\\LoginForm.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowD0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowD0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-16T10:58:05.001Z",
               "EditorCaption": ""

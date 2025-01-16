@@ -93,6 +93,7 @@
             Name = "Mitarbeiter_bearb";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter bearbeiten";
+            FormClosing += Mitarbeiter_bearb_FormClosing;
             ResumeLayout(false);
         }
 

@@ -59,6 +59,7 @@
             mitarbeiter_Transaktionen.TabIndex = 2;
             mitarbeiter_Transaktionen.Text = "Transaktionen";
             mitarbeiter_Transaktionen.UseVisualStyleBackColor = true;
+            mitarbeiter_Transaktionen.Click += mitarbeiter_Transaktionen_Click;
             // 
             // mitarbeiter_Berichte
             // 
@@ -69,6 +70,7 @@
             mitarbeiter_Berichte.TabIndex = 3;
             mitarbeiter_Berichte.Text = "Berichte";
             mitarbeiter_Berichte.UseVisualStyleBackColor = true;
+            mitarbeiter_Berichte.Click += mitarbeiter_Berichte_Click;
             // 
             // mitarbeiter_Kreditverwaltung
             // 
@@ -79,6 +81,7 @@
             mitarbeiter_Kreditverwaltung.TabIndex = 4;
             mitarbeiter_Kreditverwaltung.Text = "Kreditverwaltung";
             mitarbeiter_Kreditverwaltung.UseVisualStyleBackColor = true;
+            mitarbeiter_Kreditverwaltung.Click += mitarbeiter_Kreditverwaltung_Click;
             // 
             // mitarbeiter_Logout
             // 
@@ -89,6 +92,7 @@
             mitarbeiter_Logout.TabIndex = 5;
             mitarbeiter_Logout.Text = "Logout";
             mitarbeiter_Logout.UseVisualStyleBackColor = true;
+            mitarbeiter_Logout.Click += mitarbeiter_Logout_Click;
             // 
             // mitarbeiter_Name
             // 
@@ -111,6 +115,7 @@
             mitarbeiter_History.TabIndex = 7;
             mitarbeiter_History.Text = "History Mitarbeiter";
             mitarbeiter_History.UseVisualStyleBackColor = true;
+            mitarbeiter_History.Click += mitarbeiter_History_Click;
             // 
             // label1
             // 

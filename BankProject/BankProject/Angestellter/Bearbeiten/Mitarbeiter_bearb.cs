@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankProject.Angestellter.Main;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,13 @@ namespace BankProject.Angestellter.Bearbeiten
         {
             InitializeComponent();
         }
+
+        private void Mitarbeiter_bearb_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Mitarbeiter mitarbeiter = Mitarbeiter.GetInstance();
+            mitarbeiter.Show();
+        }
+
+
     }
 }
