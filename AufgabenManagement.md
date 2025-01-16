@@ -21,7 +21,7 @@ Database - Hugo & Nabila ***fertig***
 
 Login - gui Hugo ***fertig*** - script Hugo ***fertig***
 
-Konto - gui Hugo ***fertig*** - script Hugo ***fertig***
+Konto - gui Hugo ***fertig*** - script fehlt
 
 ==================================================================================
 
@@ -39,7 +39,7 @@ History Kunde - gui Ronny ***fertig*** - skript **fehlt**
 
 **MITARBEITER:**
 
-Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript **fehlt**
+Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript *begonnen*
 
 Mitarbeiter bearbeiten - gui Ronny ***fertig*** - skript **fehlt**
 
