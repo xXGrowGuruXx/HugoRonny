@@ -30,12 +30,16 @@ History Kunde - fehlt
 
 **MITARBEITER:**
 
-Kontoverwaltung Mitarbeiter - fehlt
+Startbildschirm Mitarbeiter - gui Ronny fertig - skript fehlt
 
-Kreditverwaltung Mitarbeiter - fehlt
+Mitarbeiter bearbeiten - gui Ronny fertig - skript fehlt
 
-Überweisung Mitarbeiter -fehlt
+Transaktionen  - gui Ronny fertig - skript fehlt
 
-History Mitarbeiter - fehlt
+Berichte  - gui Ronny fertig - skript fehlt
 
-Finanzbericht Mitarbeiter - fehlt
+Kreditverwaltung  - gui Ronny fertig - skript fehlt
+
+History Mitarbeiter  - gui Ronny fertig - skript fehlt
+
+
