@@ -10,11 +10,44 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Random-Bank-Icon.ico" />
+    <None Remove="utils\database\database.db" />
+    <None Remove="utils\sounds\error.mp3" />
+    <None Remove="utils\sounds\error.wav" />
+    <None Remove="utils\sounds\info.wav" />
+    <None Remove="utils\sounds\question.wav" />
+    <None Remove="utils\sounds\success.mp3" />
+    <None Remove="utils\sounds\success.wav" />
+    <None Remove="utils\sounds\warning.wav" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Angestellter\" />
+    <Content Include="utils\database\database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Random-Bank-Icon.ico" />
+    <Content Include="utils\sounds\error.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="utils\sounds\info.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="utils\sounds\question.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="utils\sounds\success.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="utils\sounds\warning.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mitarbeiter - bearbeiten in Angellter rein\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
   </ItemGroup>
 
   <ItemGroup>
