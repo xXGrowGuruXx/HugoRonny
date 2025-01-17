@@ -43,7 +43,7 @@ Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript **fertig**
 
 Mitarbeiter bearbeiten - Auswahlmenu - gui Ronny ***fertig*** - skript **fertig**
 
-Mitarbeiter bearbeiten - Bearbeiten - gui Hugo **fertig** - script *begonnen*
+Mitarbeiter bearbeiten - Bearbeiten - gui Hugo **fertig** - script **fertig**
 
 Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
 
