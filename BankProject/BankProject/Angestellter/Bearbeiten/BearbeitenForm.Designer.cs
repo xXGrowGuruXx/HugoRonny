@@ -36,6 +36,7 @@
             bearbeiten_position = new ComboBox();
             bearbeiten_branch = new ComboBox();
             label3 = new Label();
+            bearbeiten_SaveSettings = new Button();
             SuspendLayout();
             // 
             // bearbeiten_Back
@@ -72,7 +73,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(21, 189);
+            label2.Location = new Point(21, 133);
             label2.Name = "label2";
             label2.Size = new Size(82, 28);
             label2.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             bearbeiten_position.FormattingEnabled = true;
             bearbeiten_position.Items.AddRange(new object[] { "Manager", "Teller", "Clerk" });
-            bearbeiten_position.Location = new Point(133, 193);
+            bearbeiten_position.Location = new Point(133, 137);
             bearbeiten_position.Name = "bearbeiten_position";
             bearbeiten_position.Size = new Size(160, 28);
             bearbeiten_position.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             bearbeiten_branch.FormattingEnabled = true;
             bearbeiten_branch.Items.AddRange(new object[] { "Main Branch", "West Branch", "East Branch" });
-            bearbeiten_branch.Location = new Point(133, 271);
+            bearbeiten_branch.Location = new Point(133, 215);
             bearbeiten_branch.Name = "bearbeiten_branch";
             bearbeiten_branch.Size = new Size(160, 28);
             bearbeiten_branch.TabIndex = 6;
@@ -100,11 +101,22 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(21, 267);
+            label3.Location = new Point(21, 211);
             label3.Name = "label3";
             label3.Size = new Size(71, 28);
             label3.TabIndex = 5;
             label3.Text = "Branch";
+            // 
+            // bearbeiten_SaveSettings
+            // 
+            bearbeiten_SaveSettings.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bearbeiten_SaveSettings.Location = new Point(133, 287);
+            bearbeiten_SaveSettings.Name = "bearbeiten_SaveSettings";
+            bearbeiten_SaveSettings.Size = new Size(160, 50);
+            bearbeiten_SaveSettings.TabIndex = 7;
+            bearbeiten_SaveSettings.Text = "Anwenden";
+            bearbeiten_SaveSettings.UseVisualStyleBackColor = true;
+            bearbeiten_SaveSettings.Click += bearbeiten_SaveSettings_Click;
             // 
             // BearbeitenForm
             // 
@@ -113,6 +125,7 @@
             BackgroundImage = Properties.Resources.Random_Bank_Icon;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(431, 450);
+            Controls.Add(bearbeiten_SaveSettings);
             Controls.Add(bearbeiten_branch);
             Controls.Add(label3);
             Controls.Add(bearbeiten_position);
@@ -140,5 +153,6 @@
         private ComboBox bearbeiten_position;
         private ComboBox bearbeiten_branch;
         private Label label3;
+        private Button bearbeiten_SaveSettings;
     }
 }

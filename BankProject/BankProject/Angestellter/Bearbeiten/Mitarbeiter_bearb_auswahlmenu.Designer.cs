@@ -55,6 +55,7 @@
             mitarbeiter_bearb_Hinzufügen.TabIndex = 1;
             mitarbeiter_bearb_Hinzufügen.Text = "Mitarbeiter hinzufügen";
             mitarbeiter_bearb_Hinzufügen.UseVisualStyleBackColor = true;
+            mitarbeiter_bearb_Hinzufügen.Click += mitarbeiter_bearb_Hinzufügen_Click;
             // 
             // mitarbeiter_bearb_Loeschen
             // 

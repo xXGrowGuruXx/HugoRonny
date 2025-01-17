@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankProject.utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,20 @@ namespace BankProject.Angestellter.Bearbeiten
             {
                 string selectedMitarbeiter = bearbeiten_ChooseMitarbeiter.SelectedItem.ToString();
                 comboBoxManager.SetDetails(bearbeiten_branch, bearbeiten_position, selectedMitarbeiter);
+            }
+        }
+
+        private void bearbeiten_SaveSettings_Click(object sender, EventArgs e)
+        {
+            if (bearbeiten_ChooseMitarbeiter.SelectedItem != null && bearbeiten_position.SelectedItem != null && bearbeiten_branch.SelectedItem != null)
+            {
+                comboBoxManager.Save(bearbeiten_ChooseMitarbeiter, bearbeiten_branch, bearbeiten_position);
+            }
+            else
+            {
+                CustomSoundPlayer.PlayWarningSound();
+                MessageBox.Show("Bitte wählen Sie einen Mitarbeiter, eine Filiale und eine Position aus.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
         }
     }

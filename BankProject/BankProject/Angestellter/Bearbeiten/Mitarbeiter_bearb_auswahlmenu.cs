@@ -38,5 +38,12 @@ namespace BankProject.Angestellter.Bearbeiten
             bearbeitenForm.Show();
             this.Hide();
         }
+
+        private void mitarbeiter_bearb_Hinzufügen_Click(object sender, EventArgs e)
+        {
+            AddMitarbeiter addMitarbeiter = new AddMitarbeiter();
+            addMitarbeiter.Show();
+            this.Hide();
+        }
     }
 }

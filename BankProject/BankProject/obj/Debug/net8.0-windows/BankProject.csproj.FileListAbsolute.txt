@@ -64,3 +64,4 @@ C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\o
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Transaktionen.Transaktionen.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.BearbeitenForm.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.Mitarbeiter_bearb_auswahlmenu.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.AddMitarbeiter.resources
