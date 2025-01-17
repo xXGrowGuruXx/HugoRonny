@@ -1,6 +1,6 @@
 ﻿namespace BankProject.Angestellter.Bearbeiten
 {
-    partial class Mitarbeiter_bearb
+    partial class Mitarbeiter_bearb_auswahlmenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mitarbeiter_bearb));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mitarbeiter_bearb_auswahlmenu));
             mitarbeiter_bearb_Bearbeiten = new Button();
             mitarbeiter_bearb_Hinzufügen = new Button();
             mitarbeiter_bearb_Loeschen = new Button();
@@ -44,6 +44,7 @@
             mitarbeiter_bearb_Bearbeiten.TabIndex = 0;
             mitarbeiter_bearb_Bearbeiten.Text = "Mitarbeiter bearbeiten";
             mitarbeiter_bearb_Bearbeiten.UseVisualStyleBackColor = true;
+            mitarbeiter_bearb_Bearbeiten.Click += mitarbeiter_bearb_Bearbeiten_Click;
             // 
             // mitarbeiter_bearb_Hinzufügen
             // 
@@ -75,7 +76,7 @@
             mitarbeiter_bearb_Zurueck.Text = "Zurück";
             mitarbeiter_bearb_Zurueck.UseVisualStyleBackColor = true;
             // 
-            // Mitarbeiter_bearb
+            // Mitarbeiter_bearb_auswahlmenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -90,7 +91,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Mitarbeiter_bearb";
+            Name = "Mitarbeiter_bearb_auswahlmenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitarbeiter bearbeiten";
             FormClosing += Mitarbeiter_bearb_FormClosing;

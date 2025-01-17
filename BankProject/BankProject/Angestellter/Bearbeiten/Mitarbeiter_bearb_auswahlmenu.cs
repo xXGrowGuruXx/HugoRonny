@@ -11,11 +11,19 @@ using System.Windows.Forms;
 
 namespace BankProject.Angestellter.Bearbeiten
 {
-    public partial class Mitarbeiter_bearb : Form
+    public partial class Mitarbeiter_bearb_auswahlmenu : Form
     {
-        public Mitarbeiter_bearb()
+        private static Mitarbeiter_bearb_auswahlmenu instance;
+
+        public static Mitarbeiter_bearb_auswahlmenu GetInstance()
+        {
+            return instance;
+        }
+
+        public Mitarbeiter_bearb_auswahlmenu()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Mitarbeiter_bearb_FormClosing(object sender, FormClosingEventArgs e)
@@ -24,6 +32,11 @@ namespace BankProject.Angestellter.Bearbeiten
             mitarbeiter.Show();
         }
 
-
+        private void mitarbeiter_bearb_Bearbeiten_Click(object sender, EventArgs e)
+        {
+            BearbeitenForm bearbeitenForm = new BearbeitenForm();
+            bearbeitenForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -47,6 +47,7 @@
             bearbeiten_Back.TabIndex = 0;
             bearbeiten_Back.Text = "Zurück";
             bearbeiten_Back.UseVisualStyleBackColor = true;
+            bearbeiten_Back.Click += bearbeiten_Back_Click;
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             bearbeiten_ChooseMitarbeiter.Name = "bearbeiten_ChooseMitarbeiter";
             bearbeiten_ChooseMitarbeiter.Size = new Size(160, 28);
             bearbeiten_ChooseMitarbeiter.TabIndex = 2;
+            bearbeiten_ChooseMitarbeiter.SelectedIndexChanged += bearbeiten_ChooseMitarbeiter_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -124,6 +126,7 @@
             Name = "BearbeitenForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bearbeiten";
+            FormClosing += BearbeitenForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

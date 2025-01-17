@@ -34,7 +34,7 @@ namespace BankProject.Angestellter.Main
 
         private void mitarbeiter_Mitarb_bearbeit_Click(object sender, EventArgs e)
         {
-            Mitarbeiter_bearb mitarbeiter_Bearbeiten = new Mitarbeiter_bearb();
+            Mitarbeiter_bearb_auswahlmenu mitarbeiter_Bearbeiten = new Mitarbeiter_bearb_auswahlmenu();
             mitarbeiter_Bearbeiten.Show();
             this.Hide();
         }

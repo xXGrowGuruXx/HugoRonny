@@ -52,7 +52,6 @@ C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\o
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Properties.Resources.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProj.3A9C35BD.Up2Date
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Main.Mitarbeiter.resources
-C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.Mitarbeiter_bearb.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\BankProject.dll.config
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\utils\database\database.db
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\utils\sounds\error.wav
@@ -63,3 +62,5 @@ C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\b
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bericht.Bericht.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bericht.Mitarbeiter_History.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Transaktionen.Transaktionen.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.BearbeitenForm.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.Mitarbeiter_bearb_auswahlmenu.resources

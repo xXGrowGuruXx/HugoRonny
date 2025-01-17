@@ -4,7 +4,7 @@
     <Compile Update="Angestellter\Bearbeiten\BearbeitenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Angestellter\Bearbeiten\Mitarbeiter_bearb.cs">
+    <Compile Update="Angestellter\Bearbeiten\Mitarbeiter_bearb_auswahlmenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Angestellter\Bericht\Bericht.cs">
