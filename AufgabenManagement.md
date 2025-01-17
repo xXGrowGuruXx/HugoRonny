@@ -21,11 +21,11 @@ Database - Hugo & Nabila ***fertig***
 
 Login - gui Hugo ***fertig*** - script Hugo ***fertig***
 
-Konto - gui Hugo ***fertig*** - script fehlt
-
 ==================================================================================
 
 **KUNDE:**
+
+Konto - gui Hugo ***fertig*** - script fehlt
 
 Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
 
@@ -44,6 +44,8 @@ Startbildschirm Mitarbeiter - gui Ronny ***fertig*** - skript **fertig**
 Mitarbeiter bearbeiten - Auswahlmenu - gui Ronny ***fertig*** - skript **fertig**
 
 Mitarbeiter bearbeiten - Bearbeiten - gui Hugo **fertig** - script **fertig**
+
+Mitarbeiter bearbeiten - Hinzufügen - gui Hugo **fertig** - script **fertig**
 
 Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
 
