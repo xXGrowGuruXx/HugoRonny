@@ -47,6 +47,8 @@ Mitarbeiter bearbeiten - Bearbeiten - gui Hugo **fertig** - script **fertig**
 
 Mitarbeiter bearbeiten - Hinzufügen - gui Hugo **fertig** - script **fertig**
 
+Mitarbeiter bearbeiten - Löschen - gui Hugo **fertig** - script **fertig**
+
 Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
 
 Berichte  - gui Ronny ***fertig*** - skript **fehlt**
