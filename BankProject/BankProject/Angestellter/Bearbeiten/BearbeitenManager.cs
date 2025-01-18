@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BankProject.Angestellter.Bearbeiten
 {
-    internal class ComboBoxManager
+    internal class BearbeitenManager
     {
-        public ComboBoxManager() { }
+        public BearbeitenManager() { }
 
         public void FillComboBoxMitarbeiter(ComboBox bearbeiten_ChooseMitarbeiter)
         {
@@ -159,10 +159,12 @@ namespace BankProject.Angestellter.Bearbeiten
                     // Rückmeldung an den Benutzer
                     if (rowsAffected > 0)
                     {
+                        CustomSoundPlayer.PlaySuccessSound();
                         MessageBox.Show("Die Änderungen wurden erfolgreich gespeichert.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
+                        CustomSoundPlayer.PlayWarningSound();
                         MessageBox.Show("Es wurden keine Änderungen vorgenommen. Bitte überprüfen Sie Ihre Eingaben.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
@@ -264,6 +266,89 @@ namespace BankProject.Angestellter.Bearbeiten
 
                         CustomSoundPlayer.PlayErrorSound();
                         MessageBox.Show("Error: Mitarbeiter konnte nicht hinzugefügt werden\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        public void DeleteMitarbeiter(string selectedMitarbeiter)
+        {
+            string[] parts = selectedMitarbeiter.Split(" ");
+            if (parts.Length != 2)
+            {
+                CustomSoundPlayer.PlayWarningSound();
+                MessageBox.Show("Ungültiger Name angegeben. Bitte Vor- und Nachnamen verwenden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string vorname = parts[0];
+            string nachname = parts[1];
+
+            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
+            string connectionString = $"Data Source={databasePath};Version=3;";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                // Finde die PersonID, die gelöscht werden soll
+                string findPersonIdQuery = "SELECT PersonID FROM Person WHERE FirstName = @Vorname AND LastName = @Nachname";
+                using (SQLiteCommand findCommand = new SQLiteCommand(findPersonIdQuery, connection))
+                {
+                    findCommand.Parameters.AddWithValue("@Vorname", vorname);
+                    findCommand.Parameters.AddWithValue("@Nachname", nachname);
+
+                    object result = findCommand.ExecuteScalar();
+                    if (result == null)
+                    {
+                        CustomSoundPlayer.PlayErrorSound();
+                        MessageBox.Show("Die angegebene Person wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    int personId = Convert.ToInt32(result);
+
+                    // Löschen aus den Tabellen in der richtigen Reihenfolge (abhängige zuerst)
+                    using (SQLiteTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Lösche aus Mitarbeiter
+                            string deleteMitarbeiterQuery = "DELETE FROM Mitarbeiter WHERE PersonID = @PersonID";
+                            using (SQLiteCommand deleteMitarbeiterCommand = new SQLiteCommand(deleteMitarbeiterQuery, connection, transaction))
+                            {
+                                deleteMitarbeiterCommand.Parameters.AddWithValue("@PersonID", personId);
+                                deleteMitarbeiterCommand.ExecuteNonQuery();
+                            }
+
+                            // Lösche aus Customer
+                            string deleteCustomerQuery = "DELETE FROM Customer WHERE PersonID = @PersonID";
+                            using (SQLiteCommand deleteCustomerCommand = new SQLiteCommand(deleteCustomerQuery, connection, transaction))
+                            {
+                                deleteCustomerCommand.Parameters.AddWithValue("@PersonID", personId);
+                                deleteCustomerCommand.ExecuteNonQuery();
+                            }
+
+                            // Lösche aus Person
+                            string deletePersonQuery = "DELETE FROM Person WHERE PersonID = @PersonID";
+                            using (SQLiteCommand deletePersonCommand = new SQLiteCommand(deletePersonQuery, connection, transaction))
+                            {
+                                deletePersonCommand.Parameters.AddWithValue("@PersonID", personId);
+                                deletePersonCommand.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+
+                            CustomSoundPlayer.PlaySuccessSound();
+                            MessageBox.Show("Der Mitarbeiter wurde erfolgreich gelöscht.", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback();
+
+                            CustomSoundPlayer.PlayErrorSound();
+                            MessageBox.Show($"Fehler beim Löschen des Mitarbeiters: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }

@@ -32,6 +32,11 @@ namespace BankProject.Angestellter.Bearbeiten
             mitarbeiter.Show();
         }
 
+        private void mitarbeiter_bearb_Zurueck_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void mitarbeiter_bearb_Bearbeiten_Click(object sender, EventArgs e)
         {
             BearbeitenForm bearbeitenForm = new BearbeitenForm();
@@ -44,6 +49,12 @@ namespace BankProject.Angestellter.Bearbeiten
             AddMitarbeiter addMitarbeiter = new AddMitarbeiter();
             addMitarbeiter.Show();
             this.Hide();
+        }
+
+        private void mitarbeiter_bearb_Loeschen_Click(object sender, EventArgs e)
+        {
+            LöschenForm löschenForm = new LöschenForm();
+            löschenForm.Show();
         }
     }
 }

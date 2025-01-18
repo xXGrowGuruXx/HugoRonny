@@ -7,6 +7,9 @@
     <Compile Update="Angestellter\Bearbeiten\BearbeitenForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Angestellter\Bearbeiten\LöschenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Angestellter\Bearbeiten\Mitarbeiter_bearb_auswahlmenu.cs">
       <SubType>Form</SubType>
     </Compile>

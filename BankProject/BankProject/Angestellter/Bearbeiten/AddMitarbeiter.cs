@@ -14,14 +14,14 @@ namespace BankProject.Angestellter.Bearbeiten
 {
     public partial class AddMitarbeiter : Form
     {
-        private ComboBoxManager comboBoxManager;
+        private BearbeitenManager bearbeitenManager;
         public AddMitarbeiter()
         {
-            comboBoxManager = new ComboBoxManager();
+            bearbeitenManager = new BearbeitenManager();
             InitializeComponent();
 
-            comboBoxManager.FillComboBoxBranch(addMitarbeiter_Branch);
-            comboBoxManager.FillComboBoxPosition(addMitarbeiter_Position);
+            bearbeitenManager.FillComboBoxBranch(addMitarbeiter_Branch);
+            bearbeitenManager.FillComboBoxPosition(addMitarbeiter_Position);
         }
 
         private void AddMitarbeiter_FormClosing(object sender, FormClosingEventArgs e)
@@ -56,7 +56,7 @@ namespace BankProject.Angestellter.Bearbeiten
                 string selectedBranch = addMitarbeiter_Branch.SelectedItem.ToString().Trim();
                 string selectedPosition = addMitarbeiter_Position.SelectedItem.ToString().Trim();
 
-                comboBoxManager.SaveNewMitarbeiter(vorname, nachname, geburtsdatum, email, phoneNumer, adress, tax, selectedBranch, selectedPosition);
+                bearbeitenManager.SaveNewMitarbeiter(vorname, nachname, geburtsdatum, email, phoneNumer, adress, tax, selectedBranch, selectedPosition);
             }
             else
             {

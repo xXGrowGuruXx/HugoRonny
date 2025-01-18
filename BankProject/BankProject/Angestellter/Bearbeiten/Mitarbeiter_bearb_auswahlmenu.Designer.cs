@@ -66,6 +66,7 @@
             mitarbeiter_bearb_Loeschen.TabIndex = 2;
             mitarbeiter_bearb_Loeschen.Text = "Mitarbeiter löschen";
             mitarbeiter_bearb_Loeschen.UseVisualStyleBackColor = true;
+            mitarbeiter_bearb_Loeschen.Click += mitarbeiter_bearb_Loeschen_Click;
             // 
             // mitarbeiter_bearb_Zurueck
             // 
@@ -76,6 +77,7 @@
             mitarbeiter_bearb_Zurueck.TabIndex = 3;
             mitarbeiter_bearb_Zurueck.Text = "Zurück";
             mitarbeiter_bearb_Zurueck.UseVisualStyleBackColor = true;
+            mitarbeiter_bearb_Zurueck.Click += mitarbeiter_bearb_Zurueck_Click;
             // 
             // Mitarbeiter_bearb_auswahlmenu
             // 
