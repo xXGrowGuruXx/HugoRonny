@@ -216,13 +216,17 @@ namespace BankProject.Angestellter.Bearbeiten
                         // 2. Customer Tabelle aktuallisieren
                         string insertCustomerQuery = @"
                             INSERT INTO Customer (PersonID, CustomerType)
-                            VALUES (@PersonID, @CustomerType);";
+                            VALUES (@PersonID, @CustomerType);
+                            SELECT last_insert_rowid();";
 
+                        long customerId;
                         using (SQLiteCommand cmd = new SQLiteCommand(insertCustomerQuery, connection))
                         {
                             cmd.Parameters.AddWithValue("@PersonID", personId);
                             cmd.Parameters.AddWithValue("@CustomerType", "Mitarbeiter");
                             cmd.ExecuteNonQuery();
+
+                            customerId = (long)cmd.ExecuteScalar();
                         }
 
                         // 3. BranchID aus der Branch Tabelle auslesen
@@ -250,6 +254,21 @@ namespace BankProject.Angestellter.Bearbeiten
                             cmd.Parameters.AddWithValue("@PersonID", personId);
                             cmd.Parameters.AddWithValue("@Position", position);
                             cmd.Parameters.AddWithValue("@BranchID", branchId);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        Random randomPin = new Random();
+                        int pin = randomPin.Next(1000, 10000);
+                        DateTime dateTime = DateTime.Today;
+                        string insertAccountQuery = @"
+                            INSERT INTO Account (CustomerID, AccountNumber, AccountType, CurrentBalance, DateOpened, DateClosed, AccountStatus, AccountPin)
+                            VALUES (@CustomerID, 'AC0' || @CustomerID, 'Mitarbeiter', 0, @DATE, '', 'Active', @PIN);";
+
+                        using (SQLiteCommand cmd = new SQLiteCommand(insertAccountQuery, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                            cmd.Parameters.AddWithValue("@DATE", dateTime);
+                            cmd.Parameters.AddWithValue("@PIN", pin);
                             cmd.ExecuteNonQuery();
                         }
 
@@ -293,21 +312,47 @@ namespace BankProject.Angestellter.Bearbeiten
 
                 // Finde die PersonID, die gelöscht werden soll
                 string findPersonIdQuery = "SELECT PersonID FROM Person WHERE FirstName = @Vorname AND LastName = @Nachname";
-                using (SQLiteCommand findCommand = new SQLiteCommand(findPersonIdQuery, connection))
+                using (SQLiteCommand personIDFindCommand = new SQLiteCommand(findPersonIdQuery, connection))
                 {
-                    findCommand.Parameters.AddWithValue("@Vorname", vorname);
-                    findCommand.Parameters.AddWithValue("@Nachname", nachname);
+                    personIDFindCommand.Parameters.AddWithValue("@Vorname", vorname);
+                    personIDFindCommand.Parameters.AddWithValue("@Nachname", nachname);
 
-                    object result = findCommand.ExecuteScalar();
-                    if (result == null)
+                    object resultPersonID = personIDFindCommand.ExecuteScalar();
+                    if (resultPersonID == null)
                     {
                         CustomSoundPlayer.PlayErrorSound();
                         MessageBox.Show("Die angegebene Person wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
-                    int personId = Convert.ToInt32(result);
+                    int personId = Convert.ToInt32(resultPersonID);
 
+
+                    // Finden der CustomerID
+                    int customerID = 0;
+                    string findCustomerIdQuery =
+                        "SELECT CustomerID " +
+                        "From Customer " +
+                        "JOIN Person ON Customer.CustomerID = Person.PersonID " +
+                        "WHERE Person.PersonID = @PersonID";
+
+                    using (SQLiteCommand customerIDFindCommand = new SQLiteCommand(findCustomerIdQuery, connection))
+                    {
+                        customerIDFindCommand.Parameters.AddWithValue("@PersonID", personId);
+
+                        object resultCustomerID = customerIDFindCommand.ExecuteScalar();
+                        if (resultPersonID == null)
+                        {
+                            CustomSoundPlayer.PlayErrorSound();
+                            MessageBox.Show("Die angegebene Person wurde nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        else
+                        {
+                            customerID = Convert.ToInt32(resultCustomerID);
+                        }
+                    }
+                    
                     // Löschen aus den Tabellen in der richtigen Reihenfolge (abhängige zuerst)
                     using (SQLiteTransaction transaction = connection.BeginTransaction())
                     {
@@ -319,6 +364,14 @@ namespace BankProject.Angestellter.Bearbeiten
                             {
                                 deleteMitarbeiterCommand.Parameters.AddWithValue("@PersonID", personId);
                                 deleteMitarbeiterCommand.ExecuteNonQuery();
+                            }
+
+                            // Lösche den Account
+                            string deleteAccountQuery = "DELETE FROM Account WHERE CustomerID = @CustomerID";
+                            using (SQLiteCommand deleteAccountCommand = new SQLiteCommand(deleteAccountQuery, connection, transaction))
+                            {
+                                deleteAccountCommand.Parameters.AddWithValue("@CustomerID", customerID);
+                                deleteAccountCommand.ExecuteNonQuery();
                             }
 
                             // Lösche aus Customer
