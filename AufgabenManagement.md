@@ -59,7 +59,7 @@ History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt**
 
 ===================================================================================
 
-DB Fehlerhaft 
+DB-Vorgabe fehlerhaft 
 
 Kreditverwaltung - keine Zuweisung von Bearb.Mitarbeiter und Kunde
 
