@@ -31,7 +31,7 @@ Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
 
 Kreditverwaltung Kunde - **fehlt**
 
-Überweisung/Abheben Kunde - **fehlt**
+Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fehlt**
 
 History Kunde - gui Ronny ***fertig*** - skript **fehlt**
 
@@ -56,3 +56,8 @@ Berichte  - gui Ronny ***fertig*** - skript **fehlt**
 Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt**
 
 History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt**
+
+===================================================================================
+
+DB Fehlerhaft - Kreditverwaltung - keine Zuweisung von Bearb.Mitarbeiter und Kunde
+Loan Payment - keine Möglichkeit Kreditzahlungen für ein anderes Konto zu tätigen
