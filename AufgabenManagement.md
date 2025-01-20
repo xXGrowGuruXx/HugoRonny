@@ -59,5 +59,13 @@ History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt**
 
 ===================================================================================
 
-DB Fehlerhaft - Kreditverwaltung - keine Zuweisung von Bearb.Mitarbeiter und Kunde
+DB Fehlerhaft 
+
+Kreditverwaltung - keine Zuweisung von Bearb.Mitarbeiter und Kunde
+
 Loan Payment - keine Möglichkeit Kreditzahlungen für ein anderes Konto zu tätigen
+
+Loan Payment - keine Möglichkeit Rückzahlungskonto zuzuweisen
+
+Überweisung - keine Möglichkeit für Kunde oder Mitarbeiter ein Zielkonto zu deklarieren
+
