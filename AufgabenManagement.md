@@ -51,7 +51,7 @@ Mitarbeiter bearbeiten - Löschen - gui Hugo **fertig** - script **fertig**
 
 Transaktionen  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
-Berichte  - gui Ronny ***fertig*** - skript **fehlt** 
+Berichte  - gui Ronny ***fertig*** - script **fertig** 
 
 Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
