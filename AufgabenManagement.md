@@ -29,9 +29,9 @@ Konto - gui Hugo ***fertig*** - script fehlt
 
 Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
 
-Kreditverwaltung Kunde - **fehlt**
+Kreditverwaltung Kunde - **fehlt** - nicht lösbar
 
-Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fehlt**
+Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fehlt** - Überweisung nicht lösbar
 
 History Kunde - gui Ronny ***fertig*** - skript **fehlt**
 
@@ -49,13 +49,13 @@ Mitarbeiter bearbeiten - Hinzufügen - gui Hugo **fertig** - script **fertig**
 
 Mitarbeiter bearbeiten - Löschen - gui Hugo **fertig** - script **fertig**
 
-Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
+Transaktionen  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
-Berichte  - gui Ronny ***fertig*** - skript **fehlt**
+Berichte  - gui Ronny ***fertig*** - skript **fehlt** 
 
-Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt**
+Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
-History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt**
+History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
 ===================================================================================
 
