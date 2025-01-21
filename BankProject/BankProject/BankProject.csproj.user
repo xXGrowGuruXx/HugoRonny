@@ -25,6 +25,9 @@
     <Compile Update="Angestellter\Transaktionen\Mitarb_Transakt.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Kunde\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Kunde\Konto.cs">
       <SubType>Form</SubType>
     </Compile>

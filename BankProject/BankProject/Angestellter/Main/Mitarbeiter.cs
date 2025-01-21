@@ -1,4 +1,5 @@
 ﻿using BankProject.Angestellter.Bearbeiten;
+using BankProject.Angestellter.Bericht;
 using BankProject.utils;
 
 namespace BankProject.Angestellter.Main
@@ -47,7 +48,8 @@ namespace BankProject.Angestellter.Main
 
         private void mitarbeiter_Berichte_Click(object sender, EventArgs e)
         {
-            mitarbeiter_Berichte.Show();
+            Mitarbeiter_Berichte mitarbeiterBericht = new Mitarbeiter_Berichte();
+            mitarbeiterBericht.Show();
             this.Hide();
         }
 

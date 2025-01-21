@@ -58,23 +58,24 @@ namespace BankProject
                     File.WriteAllText(fullPath, stringBuilder.ToString());
                 }
 
-                login_mail.Text = "";
-                login_password.Text = "";
-
-                CustomSoundPlayer.PlaySuccessSound();
                 if (accountType == "Kunde")
                 {
-                    Konto konto = new Konto();
+                    CustomSoundPlayer.PlaySuccessSound();
+                    Konto konto = new Konto(login_mail.Text);
                     konto.Show();
                     this.Hide();
                 }
                 else if (accountType == "Mitarbeiter")
                 {
+                    CustomSoundPlayer.PlaySuccessSound();
                     string name = await manageLogin.GetName(mail);
                     Mitarbeiter mitarbeiter = new Mitarbeiter(name);
                     mitarbeiter.Show();
                     this.Hide();
                 }
+
+                login_mail.Text = "";
+                login_password.Text = "";
             }
             else
             {

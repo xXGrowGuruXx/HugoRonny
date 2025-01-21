@@ -59,10 +59,11 @@ C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\b
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\utils\sounds\question.wav
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\utils\sounds\success.wav
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\bin\Debug\net8.0-windows\utils\sounds\warning.wav
-C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bericht.Bericht.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bericht.Mitarbeiter_History.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Transaktionen.Transaktionen.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.BearbeitenForm.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.Mitarbeiter_bearb_auswahlmenu.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.AddMitarbeiter.resources
 C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bearbeiten.LöschenForm.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Angestellter.Bericht.mitarbeiter_Berichte.resources
+C:\Users\akein\Documents\GitHub\HugoRonnyMichaelNabila\BankProject\BankProject\obj\Debug\net8.0-windows\BankProject.Kunde.ChangePassword.resources

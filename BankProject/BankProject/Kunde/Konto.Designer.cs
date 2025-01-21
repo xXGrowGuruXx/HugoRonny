@@ -34,20 +34,19 @@
             label2 = new Label();
             kontostand = new Label();
             history = new Button();
-            überweisung = new Button();
             einzahlen = new Button();
             auszahlen = new Button();
             logout = new Button();
-            change_pass = new Button();
             verwaltung = new Button();
             kredite = new Button();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.HighlightText;
-            label1.Location = new Point(9, 9);
+            label1.Location = new Point(543, 35);
             label1.Name = "label1";
             label1.Size = new Size(121, 28);
             label1.TabIndex = 0;
@@ -57,7 +56,7 @@
             // 
             kontostatus.AutoSize = true;
             kontostatus.BackColor = SystemColors.HighlightText;
-            kontostatus.Location = new Point(136, 9);
+            kontostatus.Location = new Point(670, 35);
             kontostatus.Name = "kontostatus";
             kontostatus.Size = new Size(68, 28);
             kontostatus.TabIndex = 1;
@@ -67,7 +66,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = SystemColors.HighlightText;
-            label2.Location = new Point(12, 58);
+            label2.Location = new Point(12, 35);
             label2.Name = "label2";
             label2.Size = new Size(118, 28);
             label2.TabIndex = 2;
@@ -77,7 +76,7 @@
             // 
             kontostand.AutoSize = true;
             kontostand.BackColor = SystemColors.HighlightText;
-            kontostand.Location = new Point(136, 58);
+            kontostand.Location = new Point(136, 35);
             kontostand.Name = "kontostand";
             kontostand.Size = new Size(56, 28);
             kontostand.TabIndex = 3;
@@ -86,25 +85,17 @@
             // history
             // 
             history.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            history.Location = new Point(585, 9);
+            history.Location = new Point(558, 95);
             history.Name = "history";
-            history.Size = new Size(129, 46);
+            history.Size = new Size(180, 46);
             history.TabIndex = 4;
             history.Text = "History";
             history.UseVisualStyleBackColor = true;
-            // 
-            // überweisung
-            // 
-            überweisung.Location = new Point(12, 113);
-            überweisung.Name = "überweisung";
-            überweisung.Size = new Size(180, 43);
-            überweisung.TabIndex = 5;
-            überweisung.Text = "Überweisung";
-            überweisung.UseVisualStyleBackColor = true;
+            history.Click += history_Click;
             // 
             // einzahlen
             // 
-            einzahlen.Location = new Point(298, 113);
+            einzahlen.Location = new Point(12, 100);
             einzahlen.Name = "einzahlen";
             einzahlen.Size = new Size(180, 43);
             einzahlen.TabIndex = 6;
@@ -113,7 +104,7 @@
             // 
             // auszahlen
             // 
-            auszahlen.Location = new Point(558, 113);
+            auszahlen.Location = new Point(12, 164);
             auszahlen.Name = "auszahlen";
             auszahlen.Size = new Size(180, 43);
             auszahlen.TabIndex = 8;
@@ -122,39 +113,43 @@
             // 
             // logout
             // 
-            logout.Location = new Point(558, 186);
+            logout.Location = new Point(558, 164);
             logout.Name = "logout";
             logout.Size = new Size(180, 43);
             logout.TabIndex = 11;
             logout.Text = "Logout";
             logout.UseVisualStyleBackColor = true;
-            // 
-            // change_pass
-            // 
-            change_pass.Location = new Point(12, 186);
-            change_pass.Name = "change_pass";
-            change_pass.Size = new Size(180, 43);
-            change_pass.TabIndex = 10;
-            change_pass.Text = "Passwort ändern";
-            change_pass.UseVisualStyleBackColor = true;
+            logout.Click += logout_Click;
             // 
             // verwaltung
             // 
-            verwaltung.Location = new Point(287, 9);
+            verwaltung.Location = new Point(283, 95);
             verwaltung.Name = "verwaltung";
             verwaltung.Size = new Size(209, 48);
             verwaltung.TabIndex = 12;
             verwaltung.Text = "Konto verwalten";
             verwaltung.UseVisualStyleBackColor = true;
+            verwaltung.Click += verwaltung_Click;
             // 
             // kredite
             // 
-            kredite.Location = new Point(298, 186);
+            kredite.Location = new Point(283, 164);
             kredite.Name = "kredite";
-            kredite.Size = new Size(180, 43);
+            kredite.Size = new Size(209, 43);
             kredite.TabIndex = 13;
             kredite.Text = "Kredite";
             kredite.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.HighlightText;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(270, 22);
+            label3.Name = "label3";
+            label3.Size = new Size(231, 41);
+            label3.TabIndex = 14;
+            label3.Text = "Konto Übersicht";
             // 
             // Konto
             // 
@@ -163,13 +158,12 @@
             BackColor = SystemColors.ScrollBar;
             BackgroundImage = Properties.Resources.Random_Bank_Icon;
             ClientSize = new Size(767, 237);
+            Controls.Add(label3);
             Controls.Add(kredite);
             Controls.Add(verwaltung);
             Controls.Add(logout);
-            Controls.Add(change_pass);
             Controls.Add(auszahlen);
             Controls.Add(einzahlen);
-            Controls.Add(überweisung);
             Controls.Add(history);
             Controls.Add(kontostand);
             Controls.Add(label2);
@@ -183,6 +177,7 @@
             Name = "Konto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Konto";
+            FormClosing += Konto_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,12 +189,11 @@
         private Label label2;
         private Label kontostand;
         private Button history;
-        private Button überweisung;
         private Button einzahlen;
         private Button auszahlen;
         private Button logout;
-        private Button change_pass;
         private Button verwaltung;
         private Button kredite;
+        private Label label3;
     }
 }
