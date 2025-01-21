@@ -29,9 +29,9 @@ Konto - gui Hugo ***fertig*** - script fehlt
 
 Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
 
-Kreditverwaltung Kunde - **fehlt**
+Kreditverwaltung Kunde - **fehlt** - nicht lösbar
 
-Überweisung/Abheben Kunde - **fehlt**
+Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fehlt** - Überweisung nicht lösbar
 
 History Kunde - gui Ronny ***fertig*** - skript **fehlt**
 
@@ -49,10 +49,23 @@ Mitarbeiter bearbeiten - Hinzufügen - gui Hugo **fertig** - script **fertig**
 
 Mitarbeiter bearbeiten - Löschen - gui Hugo **fertig** - script **fertig**
 
-Transaktionen  - gui Ronny ***fertig*** - skript **fehlt**
+Transaktionen  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
-Berichte  - gui Ronny ***fertig*** - skript **fehlt**
+Berichte  - gui Ronny ***fertig*** - script **fertig** 
 
-Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt**
+Kreditverwaltung  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
 
-History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt**
+History Mitarbeiter  - gui Ronny ***fertig*** - skript **fehlt** - nicht lösbar
+
+===================================================================================
+
+DB-Vorgabe fehlerhaft 
+
+Kreditverwaltung - keine Zuweisung von Bearb.Mitarbeiter und Kunde
+
+Loan Payment - keine Möglichkeit Kreditzahlungen für ein anderes Konto zu tätigen
+
+Loan Payment - keine Möglichkeit Rückzahlungskonto zuzuweisen
+
+Überweisung - keine Möglichkeit für Kunde oder Mitarbeiter ein Zielkonto zu deklarieren
+
