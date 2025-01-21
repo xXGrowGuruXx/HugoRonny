@@ -27,7 +27,9 @@ Login - gui Hugo ***fertig*** - script Hugo ***fertig***
 
 Konto - gui Hugo ***fertig*** - script fehlt
 
-Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fehlt**
+Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fertig**
+
+Kontoverwaltung Kunde - ChangePass gui Hugo **fertig** - script **fertig**
 
 Kreditverwaltung Kunde - **fehlt** - nicht lösbar
 
