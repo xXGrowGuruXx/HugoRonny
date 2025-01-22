@@ -11,8 +11,14 @@ namespace BankProject.Login
 
         public async Task<bool> CheckLogin(string mail, string pass, string accountType)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT Account.AccountPin " +
@@ -40,11 +46,14 @@ namespace BankProject.Login
                         {
                             string storedPass = result.ToString();
 
+                            await conn.CloseAsync();
+
                             // Passwort vergleichen
                             return storedPass == pass;
                         }
                         else
                         {
+                            await conn.CloseAsync();
                             return false;
                         }
                     }
@@ -53,6 +62,7 @@ namespace BankProject.Login
             catch (Exception ex)
             {
                 // Logging der Ausnahme
+                CustomSoundPlayer.PlayErrorSound();
                 MessageBox.Show("Error: " + ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
                 return false;
@@ -61,8 +71,14 @@ namespace BankProject.Login
 
         public async Task<string> GetName(string mail)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT Person.FirstName, Person.LastName " +
@@ -86,10 +102,13 @@ namespace BankProject.Login
                             {
                                 string firstName = reader["FirstName"].ToString();
                                 string lastName = reader["LastName"].ToString();
+
+                                await conn.CloseAsync();
                                 return $"{firstName} {lastName}";
                             }
                             else
                             {
+                                await conn.CloseAsync();
                                 return ""; // Kein Ergebnis gefunden
                             }
                         }

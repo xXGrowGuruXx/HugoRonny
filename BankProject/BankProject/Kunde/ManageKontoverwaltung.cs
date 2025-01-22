@@ -18,8 +18,14 @@ namespace BankProject.Kunde
 
         public void SetUserData(TextBox vorname, TextBox nachname, TextBox gebDatum, TextBox mail, TextBox phoneNumber, TextBox adress, TextBox tax, Button safeChanges)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT FirstName, LastName, DateOfBirth, Email, PhoneNumber, Address, TaxIdentifier " +
@@ -68,13 +74,20 @@ namespace BankProject.Kunde
                         }
                     }
                 }
+                connection.Close();
             }
         }
 
         public void SafeChanges(TextBox vorname, TextBox nachname, TextBox gebDatum, TextBox mail, TextBox phoneNumber, TextBox adress, TextBox tax)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "UPDATE Person SET " +
@@ -143,8 +156,14 @@ namespace BankProject.Kunde
 
         public void CloseKonto()
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -238,8 +257,14 @@ namespace BankProject.Kunde
 
         public void FindPassword(Label oldPass)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -311,8 +336,14 @@ namespace BankProject.Kunde
 
         public void PasswortÄndern(Label oldPass, TextBox newPass)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -390,6 +421,7 @@ namespace BankProject.Kunde
                         changePassword.Close();
                     }                    
                 }
+                connection.Close();
             }
         }
     }

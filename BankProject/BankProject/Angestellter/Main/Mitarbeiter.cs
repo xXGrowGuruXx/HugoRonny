@@ -42,8 +42,8 @@ namespace BankProject.Angestellter.Main
 
         private void mitarbeiter_Transaktionen_Click(object sender, EventArgs e)
         {
-            mitarbeiter_Transaktionen.Show();
-            this.Hide();
+            CustomSoundPlayer.PlayInformationSound();
+            MessageBox.Show("...Coming Soon...\n...Maybe...", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void mitarbeiter_Berichte_Click(object sender, EventArgs e)
@@ -55,14 +55,14 @@ namespace BankProject.Angestellter.Main
 
         private void mitarbeiter_Kreditverwaltung_Click(object sender, EventArgs e)
         {
-            mitarbeiter_Kreditverwaltung.Show();
-            this.Hide();
+            CustomSoundPlayer.PlayInformationSound();
+            MessageBox.Show("...Coming Soon...\n...Maybe...", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void mitarbeiter_History_Click(object sender, EventArgs e)
         {
-            mitarbeiter_History.Show();
-            this.Hide();
+            CustomSoundPlayer.PlayInformationSound();
+            MessageBox.Show("...Coming Soon...\n...Maybe...", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void mitarbeiter_Logout_Click(object sender, EventArgs e)

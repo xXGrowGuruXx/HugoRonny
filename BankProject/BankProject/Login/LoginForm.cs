@@ -84,5 +84,30 @@ namespace BankProject
                 MessageBox.Show("Fehler:\nAccounttyp, Email oder Passwort falsch!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Frage den Benutzer, ob er die Datenbank löschen möchte
+            DialogResult result = MessageBox.Show("Möchtest du die Datenbank löschen?\n\nOK = Ja\nCancel = Nein\n\nACHTUNG: Veränderte Daten gehen verloren!",
+                                                  "Datenbank löschen?",
+                                                  MessageBoxButtons.OKCancel,
+                                                  MessageBoxIcon.Question);
+
+            // Überprüfe, welcher Button geklickt wurde
+            if (result == DialogResult.OK)
+            {
+                // Löschen der Datenbank
+                string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+                File.Delete(databasePath);
+                CustomSoundPlayer.PlaySuccessSound();
+                MessageBox.Show("Datenbank wurde gelöscht...", "Datenbank gelöscht", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                // Wenn Cancel (Nein) geklickt wurde, mach nichts oder schließe das Fenster
+                CustomSoundPlayer.PlayInformationSound();
+                MessageBox.Show("Datenbank bleibt erhalten.", "Datenbank nicht gelöscht", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

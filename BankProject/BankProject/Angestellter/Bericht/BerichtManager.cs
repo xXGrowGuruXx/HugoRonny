@@ -14,8 +14,14 @@ namespace BankProject.Angestellter.Bericht
 
         public void FillComboBoxKunde(ComboBox bearbeiten_ChooseMitarbeiter)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT DISTINCT FirstName || ' ' || LastName AS FullName " +
@@ -44,8 +50,14 @@ namespace BankProject.Angestellter.Bericht
 
         public void ShowKundenHistory(DataGridView grid, string fullName)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT Überweisung.TransactionType, Überweisung.Amount, DATE(Überweisung.TransactionDate) AS TransactionDate " +

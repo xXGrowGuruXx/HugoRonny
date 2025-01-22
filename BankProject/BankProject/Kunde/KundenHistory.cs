@@ -1,4 +1,5 @@
-﻿using BankProject.utils.export;
+﻿using BankProject.utils;
+using BankProject.utils.export;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,8 +38,14 @@ namespace BankProject.Kunde
 
         public void ShowKundenHistory(DataGridView grid, string mail)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT Überweisung.TransactionType, Überweisung.Amount, DATE(Überweisung.TransactionDate) AS TransactionDate " +

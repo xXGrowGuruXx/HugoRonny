@@ -17,8 +17,14 @@ namespace BankProject.Kunde
 
         public void SetBalance(string mail, Label kontostand)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only = False";
 
             string query =
                 "SELECT Account.CurrentBalance " +
@@ -54,8 +60,14 @@ namespace BankProject.Kunde
 
         public void ManageZahlung(string mail, ComboBox zahlungsart, TextBox betrag)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             decimal betragValue;
 
@@ -179,13 +191,20 @@ namespace BankProject.Kunde
                     CustomSoundPlayer.PlayInformationSound();
                     MessageBox.Show("Wähle bitte erst die Zahlungsart aus!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                connection.Close();
             }
         }
 
         public void ShowRestbetrag(string mail, ComboBox zahlungsart, TextBox betrag, Label restbetrag)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query =
                 "SELECT Account.CurrentBalance " +
@@ -244,6 +263,7 @@ namespace BankProject.Kunde
                                 MessageBox.Show("Fehler: Restbetrag konnte nicht berechnet werden.\n\nKontodaten nicht gefunden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
+                        connection.Close();
                     }
                     catch (Exception ex)
                     {

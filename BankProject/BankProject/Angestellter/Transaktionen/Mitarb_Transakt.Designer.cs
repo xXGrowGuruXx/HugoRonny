@@ -55,7 +55,6 @@
             transaktionen_einzahlen.TabIndex = 1;
             transaktionen_einzahlen.Text = "Einzahlen";
             transaktionen_einzahlen.UseVisualStyleBackColor = true;
-            transaktionen_einzahlen.Click += button1_Click;
             // 
             // mitarb_transakt_Auszahlen
             // 

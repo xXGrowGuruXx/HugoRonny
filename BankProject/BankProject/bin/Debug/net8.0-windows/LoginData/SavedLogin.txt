@@ -1,2 +1,0 @@
-john.smith@example.com
-9876

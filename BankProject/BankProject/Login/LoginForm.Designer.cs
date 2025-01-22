@@ -140,6 +140,7 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            FormClosing += LoginForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

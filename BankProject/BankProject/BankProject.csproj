@@ -7,6 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Random-Bank-Icon.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <StripSymbols>true</StripSymbols>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,25 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="utils\database\database.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="utils\database\database.db" />
+    <EmbeddedResource Include="utils\sounds\error.wav" />
+    <EmbeddedResource Include="utils\sounds\info.wav" />
+    <EmbeddedResource Include="utils\sounds\question.wav" />
+    <EmbeddedResource Include="utils\sounds\success.wav" />
+    <EmbeddedResource Include="utils\sounds\warning.wav" />
     <Content Include="Random-Bank-Icon.ico" />
-    <Content Include="utils\sounds\error.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="utils\sounds\info.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="utils\sounds\question.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="utils\sounds\success.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="utils\sounds\warning.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>

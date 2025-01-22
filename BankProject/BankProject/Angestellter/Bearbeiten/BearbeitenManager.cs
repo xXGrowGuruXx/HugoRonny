@@ -14,8 +14,14 @@ namespace BankProject.Angestellter.Bearbeiten
 
         public void FillComboBoxMitarbeiter(ComboBox bearbeiten_ChooseMitarbeiter)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query = 
                 "SELECT DISTINCT FirstName || ' ' || LastName AS FullName FROM Person " +
@@ -34,13 +40,20 @@ namespace BankProject.Angestellter.Bearbeiten
                         bearbeiten_ChooseMitarbeiter.Items.Add(reader["FullName"].ToString());
                     }
                 }
+                connection.Close();
             }
         }
 
         public void FillComboBoxBranch(ComboBox bearbeiten_branch)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query = "SELECT DISTINCT BranchName FROM Branch";
 
@@ -60,13 +73,20 @@ namespace BankProject.Angestellter.Bearbeiten
                         }
                     }
                 }
+                connection.Close();
             }
         }
 
         public void FillComboBoxPosition(ComboBox bearbeiten_position)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query = "SELECT DISTINCT Position FROM Mitarbeiter";
 
@@ -86,13 +106,20 @@ namespace BankProject.Angestellter.Bearbeiten
                         }
                     }
                 }
+                connection.Close();
             }
         }
 
         public void SetDetails(ComboBox bearbeiten_branch, ComboBox bearbeiten_position, string selectedMitarbeiter)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             string query = @"
                 SELECT Branch.BranchName, Mitarbeiter.Position 
@@ -123,6 +150,7 @@ namespace BankProject.Angestellter.Bearbeiten
                         }
                     }
                 }
+                connection.Close();
             }
         }
 
@@ -132,8 +160,14 @@ namespace BankProject.Angestellter.Bearbeiten
             string selectedBranch = branch.SelectedItem.ToString();
             string selectedPosition = position.SelectedItem.ToString();
 
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             // SQL-Abfrage, um Branch und Position zu aktualisieren
             string query = @"
@@ -168,6 +202,7 @@ namespace BankProject.Angestellter.Bearbeiten
                         MessageBox.Show("Es wurden keine Änderungen vorgenommen. Bitte überprüfen Sie Ihre Eingaben.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+                connection.Close();
             }
         }
 
@@ -182,8 +217,14 @@ namespace BankProject.Angestellter.Bearbeiten
             string branch,
             string position)
         {
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -287,6 +328,7 @@ namespace BankProject.Angestellter.Bearbeiten
                         MessageBox.Show("Error: Mitarbeiter konnte nicht hinzugefügt werden\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                connection.Close();
             }
         }
 
@@ -303,8 +345,14 @@ namespace BankProject.Angestellter.Bearbeiten
             string vorname = parts[0];
             string nachname = parts[1];
 
-            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
+            string databasePath = Path.Combine(Path.GetTempPath(), "database.db");
+
+            if (!File.Exists(databasePath))
+            {
+                databasePath = DatabaseHelper.ExtractDatabase();
+            }
+
+            string connectionString = $"Data Source={databasePath};Version=3;Read Only=False;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -404,6 +452,7 @@ namespace BankProject.Angestellter.Bearbeiten
                         }
                     }
                 }
+                connection.Close();
             }
         }
     }

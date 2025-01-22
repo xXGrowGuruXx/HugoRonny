@@ -1,36 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Media;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace BankProject.utils
 {
     public static class CustomSoundPlayer
     {
-        private static readonly string SoundFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils",  "sounds");
-
         /// <summary>
-        /// Spielt eine WAV-Datei ab.
+        /// Spielt eine WAV-Datei aus den eingebetteten Ressourcen ab.
         /// </summary>
-        /// <param name="fileName">Der Name der WAV-Datei.</param>
-        public static void PlaySound(string fileName)
+        /// <param name="resourceName">Der Name der eingebetteten Ressource (ohne Ordnerpfad).</param>
+        private static void PlaySound(string resourceName)
         {
             try
             {
-                string filePath = Path.Combine(SoundFolderPath, fileName);
-                if (File.Exists(filePath))
+                // Der vollständige Name der Ressource (Namespace + Datei)
+                string fullResourceName = $"BankProject.utils.sounds.{resourceName}";
+
+                // Ressource als Stream laden
+                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fullResourceName))
                 {
-                    using (SoundPlayer player = new SoundPlayer(filePath))
+                    if (stream != null)
                     {
-                        player.Play();
+                        using (SoundPlayer player = new SoundPlayer(stream))
+                        {
+                            player.Play();
+                        }
                     }
-                }
-                else
-                {
-                    throw new FileNotFoundException($"Die Datei '{fileName}' wurde nicht im Ordner 'sounds' gefunden.");
+                    else
+                    {
+                        throw new FileNotFoundException($"Die eingebettete Ressource '{resourceName}' wurde nicht gefunden.");
+                    }
                 }
             }
             catch (Exception ex)
