@@ -16,4 +16,4 @@ und dann abgewogen haben ob wir das Projekt soweit wie es geht fertig machen wol
 oder die Datenbank bearbeiten wollen und damit das Risiko eingehen das wir nicht fertig werden.
 
 
-<h1><strong>Viel Spaß beim ausprobieren!</strong></h1>
+<h1><em>Viel Spaß beim ausprobieren!</em></h1>
