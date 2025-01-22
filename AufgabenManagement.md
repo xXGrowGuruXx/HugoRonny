@@ -1,17 +1,10 @@
-Nabila - Datenbank
+Nabila - Datenbank - Will keine Fragen stellen
 
-Michael - UML
+Michael - UML - Arbeitsverweigerung
 
 Ronny & Hugo - Oberfläche
 
-
-Branch : Account : Customer : Person
-
-Customer : Employee
-
-Transaction : LoanPayment : Loan
-
-
+Hugo - Code
 
 ==================================================================================
 
@@ -25,7 +18,7 @@ Login - gui Hugo ***fertig*** - script Hugo ***fertig***
 
 **KUNDE:**
 
-Konto - gui Hugo ***fertig*** - script fehlt
+Konto - gui Hugo ***fertig*** - script **fertig**
 
 Kontoverwaltung Kunde - gui Hugo ***fertig*** - script **fertig**
 
@@ -33,9 +26,9 @@ Kontoverwaltung Kunde - ChangePass gui Hugo **fertig** - script **fertig**
 
 Kreditverwaltung Kunde - **fehlt** - nicht lösbar
 
-Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fehlt** - Überweisung nicht lösbar
+Überweisung/Abheben/Einzahlen Kunde  - gui Ronny ***fertig*** - skript **fertig** - Überweisung nicht lösbar
 
-History Kunde - gui Ronny ***fertig*** - skript **fehlt**
+History Kunde - gui Ronny ***fertig*** - skript **fertig**
 
 ===================================================================================
 
@@ -70,4 +63,3 @@ Loan Payment - keine Möglichkeit Kreditzahlungen für ein anderes Konto zu tät
 Loan Payment - keine Möglichkeit Rückzahlungskonto zuzuweisen
 
 Überweisung - keine Möglichkeit für Kunde oder Mitarbeiter ein Zielkonto zu deklarieren
-
