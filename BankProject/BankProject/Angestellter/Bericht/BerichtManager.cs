@@ -48,7 +48,7 @@ namespace BankProject.Angestellter.Bericht
             string connectionString = $"Data Source={databasePath};Version=3;";
 
             string query =
-                "SELECT Überweisung.TransactionType, Überweisung.Amount, Überweisung.TransactionDate " +
+                "SELECT Überweisung.TransactionType, Überweisung.Amount, DATE(Überweisung.TransactionDate) AS TransactionDate " +
                 "FROM Überweisung " +
                 "JOIN Account ON Überweisung.AccountID = Account.AccountID " +
                 "JOIN Customer ON Customer.CustomerID = Account.CustomerID " +

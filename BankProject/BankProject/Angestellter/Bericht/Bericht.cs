@@ -1,4 +1,5 @@
 ﻿using BankProject.Angestellter.Main;
+using BankProject.utils.export;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,12 @@ namespace BankProject.Angestellter.Bericht
             string fullName = bericht_Kunde.Text.Trim();
             BerichtManager berichtManager = new BerichtManager();
             berichtManager.ShowKundenHistory(bericht_DataGrid, fullName);
+        }
+
+        private void bericht_exportieren_Click(object sender, EventArgs e)
+        {
+            ExportToExcel exportToExcel = new ExportToExcel();
+            exportToExcel.ExportToFile(bericht_DataGrid, bericht_Kunde.Text.Trim());
         }
     }
 }

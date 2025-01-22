@@ -1,13 +1,16 @@
 ﻿using BankProject.Kunde;
+using BankProject.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BankProject
 {
@@ -28,6 +31,46 @@ namespace BankProject
             userMail = email;
 
             InitializeComponent();
+
+            SetDatas();
+        }
+
+        public void SetDatas()
+        {
+            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "utils", "database", "database.db");
+            string connectionString = $"Data Source={databasePath};Version=3;";
+
+            string query =
+                "SELECT Account.AccountStatus, Account.CurrentBalance " +
+                "FROM Person " +
+                "JOIN Customer ON Person.PersonID = Customer.PersonID " +
+                "JOIN Account ON Customer.CustomerID = Account.CustomerID " +
+                "WHERE Person.Email = @Mail";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Mail", userMail);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read()) // Nur wenn ein Datensatz vorhanden ist
+                        {
+                            kontostand.Text = reader["CurrentBalance"].ToString();
+                            kontostatus.Text = reader["AccountStatus"].ToString();
+                        }
+                        else
+                        {
+                            CustomSoundPlayer.PlayErrorSound();
+                            MessageBox.Show("Error: Userinformationen konnten nicht gefunden werden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                connection.Close();
+            }
         }
 
         private void Konto_FormClosing(object sender, FormClosingEventArgs e)
@@ -50,7 +93,28 @@ namespace BankProject
 
         private void history_Click(object sender, EventArgs e)
         {
+            KundenHistory kundenHistory = new KundenHistory(userMail);
+            kundenHistory.Show();
+        }
 
+        private void einzahlen_Click(object sender, EventArgs e)
+        {
+            Kontobewegungen kontobewegungen = new Kontobewegungen(userMail);
+            kontobewegungen.Show();
+            this.Hide();
+        }
+
+        private void auszahlen_Click(object sender, EventArgs e)
+        {
+            Kontobewegungen kontobewegungen = new Kontobewegungen(userMail);
+            kontobewegungen.Show();
+            this.Hide();
+        }
+
+        private void kredite_Click(object sender, EventArgs e)
+        {
+            CustomSoundPlayer.PlayInformationSound();
+            MessageBox.Show("...Coming Soon...\n...Maybe...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
     }
 }

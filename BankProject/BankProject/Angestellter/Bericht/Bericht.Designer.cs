@@ -67,8 +67,9 @@
             bericht_exportieren.Name = "bericht_exportieren";
             bericht_exportieren.Size = new Size(178, 46);
             bericht_exportieren.TabIndex = 3;
-            bericht_exportieren.Text = "exportieren";
+            bericht_exportieren.Text = "Export";
             bericht_exportieren.UseVisualStyleBackColor = true;
+            bericht_exportieren.Click += bericht_exportieren_Click;
             // 
             // bericht_zurueck
             // 

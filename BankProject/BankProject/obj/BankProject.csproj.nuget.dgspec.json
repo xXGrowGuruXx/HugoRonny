@@ -51,6 +51,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.5.3, )"
+            },
             "System.Data.SQLite": {
               "target": "Package",
               "version": "[1.0.119, )"

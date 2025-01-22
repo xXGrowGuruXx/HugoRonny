@@ -101,6 +101,7 @@
             einzahlen.TabIndex = 6;
             einzahlen.Text = "Einzahlen";
             einzahlen.UseVisualStyleBackColor = true;
+            einzahlen.Click += einzahlen_Click;
             // 
             // auszahlen
             // 
@@ -110,6 +111,7 @@
             auszahlen.TabIndex = 8;
             auszahlen.Text = "Auszahlen";
             auszahlen.UseVisualStyleBackColor = true;
+            auszahlen.Click += auszahlen_Click;
             // 
             // logout
             // 
@@ -139,6 +141,7 @@
             kredite.TabIndex = 13;
             kredite.Text = "Kredite";
             kredite.UseVisualStyleBackColor = true;
+            kredite.Click += kredite_Click;
             // 
             // label3
             // 
