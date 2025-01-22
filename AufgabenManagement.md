@@ -1,17 +1,10 @@
-Nabila - Datenbank
+Nabila - Datenbank - Will keine Fragen stellen
 
-Michael - UML
+Michael - UML - Arbeitsverweigerung
 
 Ronny & Hugo - Oberfläche
 
-
-Branch : Account : Customer : Person
-
-Customer : Employee
-
-Transaction : LoanPayment : Loan
-
-
+Hugo - Code
 
 ==================================================================================
 
