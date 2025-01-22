@@ -1,4 +1,4 @@
-<span style="font-size: 50px;">**READ ME**</span>
+#**READ ME**
 
 Dies ist ein Projekt welches in form der Schule zum Fachinformatiker - Anwendungsentwicklung statt fand.
 
@@ -15,4 +15,4 @@ wir dies zuspät mitbekommen haben
 und dann abgewogen haben ob wir das Projekt soweit wie es geht fertig machen wollen
 oder die Datenbank bearbeiten wollen und damit das Risiko eingehen das wir nicht fertig werden.
 
-<span style="font-size: 50px;">**Viel Spaß beim ausprobieren**</span>
+##**Viel Spaß beim ausprobieren!**
